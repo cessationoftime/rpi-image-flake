@@ -46,6 +46,9 @@
             "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64-installer.nix"
           ];
 
+          # do not compress to zst
+          sdImage.compressImage = false;
+
           services.openssh = {
             enable = true;
             permitRootLogin = "yes";
