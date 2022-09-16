@@ -5,6 +5,12 @@ Here's a simple flake to build a basic NixOS image for the Raspberry Pi 2 and 4.
 
 ## Build Instructions
 
+Compiling on x86-64-linux requires this line in the nixos configuration:
+
+```
+boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+```
+
 Either
 
 `nix build github:PhilTaken/rpi-image-flake#images.rpi4` (or images.rpi2, whatever you want to build)
