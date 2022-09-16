@@ -19,6 +19,7 @@ The output will be under `result/sd-image/nixos-sd-image-$(version).$(date).$(ha
 To obtain the unpacked image file, just copy it somewhere and unpack with `unzstd`:
 
 1. `cp result/sd-image/nixos-sd-image-21.05.20220115.0fd9ee1-aarch64-linux.img.zst .`
+1. `nix-shell -p zstd`
 1. `unzstd nixos-sd-image-21.05.20220115.0fd9ee1-aarch64-linux.img.zst`
 
 ## Install/Flash instructions
